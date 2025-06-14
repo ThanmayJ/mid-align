@@ -50,7 +50,7 @@ pip install flash-attn --no-build-isolation
 # other huggingface packags
 pip install datasets evaluate peft
 # helper packages
-pip install skikit-learn hf_mtask_trainer 
+pip install scikit-learn hf_mtask_trainer==0.0.2a3 
 # for evaluation
 pip install seqeval levenshtein sacrebleu unbabel-comet
 ```
