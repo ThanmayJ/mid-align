@@ -14,6 +14,8 @@ module load devel/cuda/12.0
 HOST_NUM=1
 INDEX=0
 
+train_path="./scripts/run_clm_lora.py"
+
 model_path="meta-llama/Meta-Llama-3-8B-Instruct"
 train_files="./data_example/train_baseline.json" # replace by actual training data
 valid_files="./data_example/train_baseline.json" # replace by actual validation data
@@ -28,7 +30,7 @@ nproc_per_node=1 # number of GPUs used in training
 
 torchrun --nnodes $HOST_NUM --node_rank $INDEX --nproc_per_node $nproc_per_node \
     --master_addr $MASTER_ADDR --master_port $MASTER_PORT  \
-    ./scripts/run_clm_lora.py \
+    ${train_path} \
     --deepspeed ./config/deepspeed_config.json \
     --bf16 True \
     --bf16_full_eval True \

@@ -14,9 +14,11 @@ module load devel/cuda/12.0
 HOST_NUM=1
 INDEX=0
 
+train_path="./scripts/run_clm_lora.py"
+
 model_path="meta-llama/Meta-Llama-3-8B-Instruct"
-train_files="./data_example/train_baseline.json" # replace by actual training data
-valid_files="./data_example/train_baseline.json" # replace by actual validation data
+train_files="./data_example/train_baseline_with_alignment.json" # replace by actual training data
+valid_files="./data_example/train_baseline_with_alignment.json" # replace by actual validation data
 train_bsz=32
 eval_bsz=32
 gradient_accumulation_steps=4

@@ -11,6 +11,7 @@ data/*
 # !data/processed
 output/
 outputs/
+test_run_outputs/
 
 
 # Byte-compiled / optimized / DLL files
